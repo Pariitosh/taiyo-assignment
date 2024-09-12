@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link,useLocation } from "react-router-dom"
 
 export default function Sidebar(){
+  //sidebar component
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const toggleMobileMenu = () => {
@@ -9,6 +10,7 @@ export default function Sidebar(){
   }
     return(
       <>
+      {/* menu for desktop screen */}
       <div className="hidden md:block w-64 bg-white shadow-md">
         <nav className="mt-5">
           <Link
@@ -32,6 +34,7 @@ export default function Sidebar(){
         </nav>
       </div>
 
+{/* menu for phone screen */}
 <div className="md:hidden">
 <button
   onClick={toggleMobileMenu}

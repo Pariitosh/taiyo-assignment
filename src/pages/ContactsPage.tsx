@@ -57,8 +57,8 @@ export const ContactsPage: React.FC = () => {
 
                                 <span
                                     className={`inline-block mt-2 px-2 py-1 text-xs font-semibold rounded-full ${contact.status === 'active'
-                                            ? 'bg-green-200 text-green-800'
-                                            : 'bg-red-200 text-red-800'
+                                        ? 'bg-green-200 text-green-800'
+                                        : 'bg-red-200 text-red-800'
                                         }`}
                                 >
                                     {contact.status}
@@ -84,7 +84,7 @@ export const ContactsPage: React.FC = () => {
             </div>
 
             {editingIndex !== null && (
-                <div className="modal"> {/* Add your modal styling */}
+                <div className="modal">
                     <EditModal
                         contact={contacts[editingIndex]}
                         index={editingIndex}

@@ -4,6 +4,8 @@ import {ContactsPage} from '../pages/ContactsPage';
 import {ChartsPage} from '../pages/ChartsPage';
 
 export const MainRoutes: React.FC = () => (
+
+  // All the main routes, including nested routing as well for sidebar layout.
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>

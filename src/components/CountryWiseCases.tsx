@@ -50,6 +50,7 @@ export const CountryWiseCases: React.FC = () => {
 
   return (
     <div style={{ width: "100%", height: "400px" }}>
+      {/* rendering the map */}
       <ComposableMap projectionConfig={{ scale: 147 }}>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -83,6 +84,7 @@ export const CountryWiseCases: React.FC = () => {
           )
         ))}
       </ComposableMap>
+      {/* marker for data */}
       <Tooltip id="country-tooltip" place="top">
         {content.split(',').map((line, index) => (
           <div key={index}>{line.trim()}</div>
