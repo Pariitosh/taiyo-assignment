@@ -1,5 +1,6 @@
 # Taiyo Assignment
 
+Tech stack - ReactJS, TypeScript, TailwindCSS, React Router v6, React Query, Redux Toolkit, MUI Charts and simple react charts
 ## Installation
 
 1. **Clone the repository**
