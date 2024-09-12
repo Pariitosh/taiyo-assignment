@@ -16,6 +16,12 @@ interface ProcessedCountryData {
   [key: string]: CountryData;
 }
 
+interface CountryMapData {
+  name: string;
+  coordinates: [number, number];
+  data: CountryData | undefined;
+}
+
 const processData = (data: CountryData[]): ProcessedCountryData => {
   return data.reduce((acc, item) => {
     acc[item.country] = item;
@@ -38,7 +44,7 @@ export const CountryWiseCases: React.FC = () => {
 
   const processedData = processData(data);
 
-  const countryData = [
+  const countryData: CountryMapData[] = [
     { name: "USA", coordinates: [-95, 38], data: processedData['USA'] },
     { name: "Brazil", coordinates: [-55, -10], data: processedData['Brazil'] },
     { name: "India", coordinates: [78, 21], data: processedData['India'] },
@@ -50,7 +56,6 @@ export const CountryWiseCases: React.FC = () => {
 
   return (
     <div style={{ width: "100%", height: "400px" }}>
-      {/* rendering the map */}
       <ComposableMap projectionConfig={{ scale: 147 }}>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -66,7 +71,7 @@ export const CountryWiseCases: React.FC = () => {
         </Geographies>
         {countryData.map(({ name, coordinates, data }) => (
           data && (
-            <Marker key={name} coordinates={coordinates}>
+            <Marker key={name} coordinates={coordinates as [number, number]}>
               <circle
                 r={5}
                 fill="#F00"
@@ -84,7 +89,6 @@ export const CountryWiseCases: React.FC = () => {
           )
         ))}
       </ComposableMap>
-      {/* marker for data */}
       <Tooltip id="country-tooltip" place="top">
         {content.split(',').map((line, index) => (
           <div key={index}>{line.trim()}</div>

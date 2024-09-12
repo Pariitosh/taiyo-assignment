@@ -66,7 +66,7 @@ export const FluctuationChart: React.FC = () => {
           {
             data: caseCounts,
             label: 'COVID-19 Cases',
-            valueFormatter: (value) => value.toLocaleString(),
+            valueFormatter: (value) => value?.toLocaleString()??'',
           },
         ]}
         width={isMobile ? 500 : 700}
