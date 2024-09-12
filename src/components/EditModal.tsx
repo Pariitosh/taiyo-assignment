@@ -49,7 +49,7 @@ export const EditModal: React.FC<EditContactFormProps> = ({ contact, index, onCl
                             id="firstName"
                             value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
                         />
                     </div>
                     <div className="mb-4">
@@ -61,7 +61,7 @@ export const EditModal: React.FC<EditContactFormProps> = ({ contact, index, onCl
                             id="lastName"
                             value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
                         />
                     </div>
                     <div className="mb-4">
@@ -74,7 +74,7 @@ export const EditModal: React.FC<EditContactFormProps> = ({ contact, index, onCl
                                     value="active"
                                     checked={status === 'active'}
                                     onChange={() => setStatus('active')}
-                                    className="form-radio text-blue-600"
+                                    className="form-radio red-600"
                                 />
                                 <span className="ml-2">Active</span>
                             </label>
@@ -102,7 +102,7 @@ export const EditModal: React.FC<EditContactFormProps> = ({ contact, index, onCl
                         <button
 
                             type="submit"
-                            className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                         >
                             Save Changes
                         </button>

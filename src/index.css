@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#firstName:focus{
+    outline: red !important;
+    appearance: none;
+    border: 0px;
+}

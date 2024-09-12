@@ -18,14 +18,14 @@ export const ChartsPage: React.FC = () => {
       {/* Top section with clickable divs */}
       <div className="flex flex-col gap-4 mb-6 sm:mb-8">
         <div
-          className={`p-4 sm:p-6 rounded-lg shadow-md cursor-pointer transition-colors ${displayComponent === 'fluctuation' ? 'bg-blue-500 text-white' : 'bg-white hover:bg-blue-100'
+          className={`p-4 sm:p-6 rounded-lg shadow-md cursor-pointer transition-colors ${displayComponent === 'fluctuation' ? 'bg-red-500 text-white' : 'bg-white hover:bg-blue-100'
             }`}
           onClick={() => handleComponentSelect('fluctuation')}
         >
           <h2 className="text-lg sm:text-xl font-semibold text-center">Cases Fluctuation Graph</h2>
         </div>
         <div
-          className={`p-4 sm:p-6 rounded-lg shadow-md cursor-pointer transition-colors ${displayComponent === 'countryWise' ? 'bg-blue-500 text-white' : 'bg-white hover:bg-blue-100'
+          className={`p-4 sm:p-6 rounded-lg shadow-md cursor-pointer transition-colors ${displayComponent === 'countryWise' ? 'bg-red-500 text-white' : 'bg-white hover:bg-blue-100'
             }`}
           onClick={() => handleComponentSelect('countryWise')}
         >
