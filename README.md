@@ -1,12 +1,23 @@
 # Taiyo Assignment
 
+## Installation
 
-Installation
+1. **Clone the repository**
 
-npm install
-or
-yarn install
+   ```bash
+   git clone https://github.com/yourusername/project-name.git
+   cd project-name
+1. **Install dependencies**
 
-npm run dev
-or
-yarn dev
+   ```bash
+   npm install
+   # or
+   yarn install
+
+1. **Running the Project**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+
